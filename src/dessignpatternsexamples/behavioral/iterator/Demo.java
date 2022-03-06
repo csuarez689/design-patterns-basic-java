@@ -16,6 +16,7 @@ import java.util.Set;
  *
  * @author Claudio
  */
+//Inspect Java Iterator implementation
 public class Demo {
 
     public static void iterate(Iterator iterator) {

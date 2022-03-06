@@ -15,25 +15,25 @@ public class Demo {
         TextWindow textWindow = new TextWindow();
         textWindow.write("Line 1\n");
         textWindow.write("Line 2\n");
-        textEditor.save(textWindow.save());
+        textEditor.save(textWindow.save()); //generates 1st snapshot
         textWindow.write("Line 3\n");
         textWindow.write("Line 4\n");
-        textEditor.save(textWindow.save());
+        textEditor.save(textWindow.save()); //generates 2nd snapshot
         textWindow.write("Line 5\n");
         textWindow.write("Line 6\n");
-        textEditor.save(textWindow.save());
+        textEditor.save(textWindow.save()); //generates 3rd snapshot
 
         textWindow.print();
         System.out.println("##############################################");
-        textWindow.restore(textEditor.getStateBySnapshotIndex(1));
+        textWindow.restore(textEditor.getStateBySnapshotIndex(1)); //back to 2nd snapshot
 
         textWindow.print();
         System.out.println("##############################################");
-        textWindow.restore(textEditor.getStateBySnapshotIndex(0));
+        textWindow.restore(textEditor.getStateBySnapshotIndex(0)); //back to 1st snapshot
 
         textWindow.print();
         System.out.println("##############################################");
-        textWindow.restore(textEditor.getStateBySnapshotIndex(2));
+        textWindow.restore(textEditor.getStateBySnapshotIndex(2)); //forward to 3nd snapshot
 
         textWindow.print();
 

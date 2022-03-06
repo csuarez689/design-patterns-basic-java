@@ -32,7 +32,7 @@ public class OnlineStore {
 
     private void notifySubscribers() {
         for (IObserver observer : observers) {
-            observer.update();
+            observer.notify();
         }
     }
 }

@@ -14,6 +14,7 @@ public class B2BCustomer implements IObserver {
         onlineStore.addListener(this);
     }
 
+    @Override
     public void update() {
         System.out.println("Products arrived to the store. Make your B2B order now");
     }
